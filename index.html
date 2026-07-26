@@ -4,205 +4,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing page</title>
+  <title>ExamGuard AI - Enterprise Examination Management & Vision AI Verification</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="container">
+
+    <!-- Navigation Bar -->
     <div class="section1">
       <div class="nav-bar">
         <nav>
-          <label for="">Site name</label>
+          <label for="site-name" class="site-name-label">ExamGuard AI</label>
           <ul>
-            <li><a href="">Page</a></li>
-            <li><a href="">Page</a></li>
-            <li><a href="">Page</a></li>
-            <li><a href="" class="btn1">Button</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#pricing" class="btn1">Deploy Now</a></li>
           </ul>
         </nav>
       </div>
 
+      <!-- Hero Section -->
       <div class="hero-section">
-        <h1>Landing page title</h1>
+        <h1>Secure & Intelligent Examination Management</h1>
         <p>
-          Subheading that sets up context, shares more info about the website,
-          or <br>generally gets people psyched to keep scrolling.
+          ExamGuard AI replaces manual, paper-heavy grading processes with an advanced local-network system.
+          Using Gemini Flash AI, it instantly reads student identity and marks from scanned script covers,
+          cross-references records, and computes final results flawlessly.
         </p>
 
-        <button class="btn2">Button</button>
+        <button class="btn2" onclick="location.href='#pricing'">Start Free Trial</button>
 
-        <img src="/images/pic1.jpeg" alt="" >
+        <img src="images/pic1.jpeg" alt="ExamGuard AI Dashboard Visualization" >
       </div>
     </div>
 
-    <div class="section-2">
-      <h1>Section heading</h1>
+    <!-- Section 2: Roles & Architecture -->
+    <div class="section-2" id="features">
+      <h1>Built Around Secure, Role-Based Access Control</h1>
       <div class="images">
         <div class="lhs-img">
-          <img src="/images/pic2.jpeg" alt="">
-          <h3>Subheading</h3>
+          <img src="images/pic2.jpeg" alt="Super Admin Cloud Interface">
+          <h3>Super Admin (Cloud Layer)</h3>
           <p>
-            Body text for whatever you’d like to add more to the subheading.
+            Hosted on a secure cloud VPS with mandatory 2FA. Super Admins activate/deactivate Admin accounts upon payment confirmation via Mobile Money or bank API.
           </p>
         </div>
 
         <div class="middle-img">
-          <img src="/images/pic3.jpeg" alt="">
-          <h3>Subheading</h3>
+          <img src="images/pic3.jpeg" alt="Admin Local Management">
+          <h3>Admin (Local Campus)</h3>
           <p>
-            Body text for whatever you’d like to expand on the main point.
+            Operates on the school's local network. Manages Record Officers, unlocks Exam Sessions, and triggers security-monitored remark or resit operations.
           </p>
         </div>
 
         <div class="rhs-img">
-          <img src="/images/pic4.jpeg" alt="">
-          <h4>Subheading</h4>
-          <p>Body text for whatever you’d like to share more.</p>
+          <img src="images/pic4.jpeg" alt="Record Officer Script Scanner">
+          <h3>Record Officer (Campus Core)</h3>
+          <p>
+            Processes student records, uploads CA sheets, photographs/scans script cover sheets, and handles AI confidence verification workflows.
+          </p>
         </div>
       </div>
     </div>
 
-    <!--Section 3-->
-
+    <!-- Section 3: Core Automated Workflow -->
     <section class="section-3">
       <aside class="lhs">
-        <h1>Section Heading</h1>
+        <h1>Streamlined Marks & Vision Extraction Workflow</h1>
 
-        <h5>Subheading</h5>
-        <p>Body text for whatever you’d like to expand <br>on the main point.</p>
+        <h5>1. Continuous Assessment (CA) Excel Upload</h5>
+        <p>Record Officers upload CA marks using our standardized Excel template (max 30 marks). The system auto-detects academic context and flags missing marks to prevent fraud.</p>
 
-        <h5>Subheading</h5>
+        <h5>2. Google Gemini Flash Vision AI Scanning</h5>
         <p>
-          Body text for whatever you’d like to say. Add <br>main takeaway points,
-          quotes, anecdotes.
+          Scans student name, matricule number, and exam marks (out of 70). Achieves 1-2s extraction speed, interprets negative marks (-70 to 70), and falls back to manual validation for ambiguous handwriting.
         </p>
 
-        <h5>Subheading</h5>
+        <h5>3. Confidence-Flagged Review Screen</h5>
         <p>
-          Body text for whatever you’d like <br>to add more to the main point. It
-          provides details,<br> explanations, and context.
+          Any field falling below the AI confidence threshold is marked in Red. Officers must explicitly Approve (finalize to master) or Discard (reject with prompt) each entry.
         </p>
 
-        <button class="btn3">Button</button>
-        <button class="btn4">Secondary button</button>
+        <button class="btn3" onclick="location.href='#pricing'">View Pricing</button>
+        <button class="btn4" onclick="alert('Downloading ExamGuard_CA_Template.xlsx (Placeholder)')">Download CA Template</button>
       </aside>
 
       <aside class="rhs">
-        <img src="/images/pic5.jpeg" alt="">
+        <img src="images/pic5.jpeg" alt="Vision AI Scanner Interface">
       </aside>
     </section>
 
-    <section class="section-4">
-      <h1>Section Heading</h1>
+    <!-- Section 4: Security & Audit Controls -->
+    <section class="section-4" id="security">
+      <h1>Bank-Grade Security & Offline-First Integrity</h1>
       <div class="main-conttainer">
         <div class="lh-side">
-          <img src="/images/pic6.jpeg" alt="">
-          <h5>Subheading</h5>
+          <img src="images/pic6.jpeg" alt="Database and Local Architecture">
+          <h5>Raw SQL & On-Premises Isolation</h5>
           <p>
-            Body text for whatever you’d like to add more to the subheading.
+            Local server restricts Admin & Record Officer access strictly to the campus intranet. Uses raw SQL via PostgreSQL 'pg' driver (no ORM) with TLS/HTTPS encryption in transit.
           </p>
         </div>
 
         <div class="rh-side">
-          <img src="/images/pic6.jpeg" alt="">
-          <h5>Subheading</h5>
-          <p>Body text for whatever you’d like to expand on the main point.</p>
+          <img src="images/pic7.jpeg" alt="Audit logs & Outbound Tunneling">
+          <h5>Unalterable Audit Logs & Outbound Tunnels</h5>
+          <p>
+            Maintains strict audit trails (original vs edited marks, editor, timestamp). Connects securely to Cloud VPS using mutually verified certificates or rotated keys via an outbound-initiated tunnel.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Section 5: Institutional Testimonials -->
     <section class="section-5">
-      <h1>Section Heading</h1>
+      <h1>Trusted by Yaoundé International Business School (YIBS)</h1>
       <div class="main-profiles">
         <div class="lhs">
-          <h4>“A terrific piece of praise”</h4>
+          <h4>“Flawless Academic Integrity”</h4>
           <div class="profile">
-            <img src="/images/pic2.jpeg" alt="">
+            <img src="images/pic2.jpeg" alt="YIBS Registrar">
             <div class="span">
-              <label for="Name">Name</label>
-              <p>Description</p>
+              <label>Dr. F. Kamga</label>
+              <p>Academic Registrar, YIBS</p>
             </div>
           </div>
         </div>
-
 
         <div class="middle">
-          <h4>“A terrific piece of praise”</h4>
+          <h4>“1-2s Script Scanning Speeds”</h4>
           <div class="profile">
-            <img src="/images/pic2.jpeg" alt="">
+            <img src="images/pic2.jpeg" alt="Chief Record Officer">
             <div class="span">
-              <label for="Name">Name</label>
-              <p>Description</p>
+              <label>Mrs. Beatrice Mbah</label>
+              <p>Chief Record Officer</p>
             </div>
           </div>
         </div>
 
-
         <div class="rhs">
-          <h4>“A terrific piece of praise”</h4>
+          <h4>“Audit Logs Eliminate Dispute”</h4>
           <div class="profile">
-            <img src="/images/pic2.jpeg" alt="">
+            <img src="images/pic2.jpeg" alt="IT Director">
             <div class="span">
-              <label for="Name">Name</label>
-              <p>Description</p>
+              <label>Engr. Noel T.</label>
+              <p>IT Infrastructure Director</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Dedicated Pricing Section (Added for FR-35, FR-36, FR-37) -->
+    <section class="pricing-section" id="pricing">
+      <h1>Transparent, Tiered Licensing Plans</h1>
+      <p class="pricing-intro">Select the perfect tier for your institution. All paid plans include outbound cloud tunneling, system-verified API payments, and priority setup support.</p>
+
+      <div class="pricing-container">
+        <!-- Card 1: Free Trial -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3>Free Trial</h3>
+            <span class="price">0 FCFA</span>
+            <span class="period">for 30 days</span>
+          </div>
+          <ul class="card-features">
+            <li>Manual mark entry only</li>
+            <li>No AI-powered script scanning</li>
+            <li>Single user/admin limit</li>
+            <li>Local-only reporting</li>
+            <li>Email trial expiry reminders</li>
+          </ul>
+          <button class="pricing-btn" onclick="alert('Trial activated for 30 days! Login details sent to your registered email.')">Get Started</button>
+        </div>
+
+        <!-- Card 2: Standard Plan -->
+        <div class="pricing-card popular">
+          <div class="badge">Most Popular</div>
+          <div class="card-header">
+            <h3>Standard</h3>
+            <span class="price">250,000 - 400,000 FCFA</span>
+            <span class="period">per year</span>
+          </div>
+          <ul class="card-features">
+            <li>Up to 1,000 students supported</li>
+            <li>Full Gemini Flash vision AI scanning</li>
+            <li>Confidence-flagged reviews</li>
+            <li>Excel/CSV export & master logs</li>
+            <li>Single academic department / session</li>
+            <li>Mobile Money (MTN MoMo) pay-gate</li>
+          </ul>
+          <button class="pricing-btn" onclick="alert('Redirecting to secure MTN Mobile Money / Orange Money portal...')">Choose Standard</button>
+        </div>
+
+        <!-- Card 3: Institution Plan -->
+        <div class="pricing-card">
+          <div class="card-header">
+            <h3>Institution</h3>
+            <span class="price">500,000 - 750,000 FCFA</span>
+            <span class="period">per year</span>
+          </div>
+          <ul class="card-features">
+            <li>Uncapped student accounts</li>
+            <li>Multiple concurrent sessions</li>
+            <li>All departments & specialties</li>
+            <li>Priority local deployment support</li>
+            <li>Automated VPS cloud backups</li>
+            <li>Bank Transfer / MoMo payment</li>
+          </ul>
+          <button class="pricing-btn" onclick="alert('Contacting sales for institutional onboarding & network survey...')">Deploy Enterprise</button>
+        </div>
+      </div>
+
+      <div class="additional-pricing-info">
+        <p><strong>One-time Setup Fee:</strong> 150,000 – 300,000 FCFA (Includes on-site deployment, local server network config, and initial database import).</p>
+        <p><strong>Optional Maintenance Contract:</strong> 50,000 – 100,000 FCFA/year. <strong>Cloud Add-ons:</strong> Cloud VPS hosting (5,000 – 15,000 FCFA/month) and cloud backup service.</p>
+      </div>
+    </section>
+
+    <!-- Section 6: CTA and Footer -->
     <section class="section-6">
       <div class="top">
-        <h1>Section heading</h1>
-        <button class="btn5">Button</button>
-        <button class="btn6">Secondary Button</button>
+        <h1>Transform Your Grading Integrity Today</h1>
+        <button class="btn5" onclick="location.href='#pricing'">Get Started</button>
+        <button class="btn6" onclick="alert('Contacting sales at info@yibs.edu.cm...')">Contact Sales</button>
       </div>
 
       <footer>
         <div class="lhs">
-          <label for="">Site Name</label>
+          <label>ExamGuard AI</label>
           <i>
-            <img src="/icons/facebook.jpeg" alt="">
-            <img src="/icons/IG.jpeg" alt="">
-            <img src="/icons/linkedIn.jpeg" alt="">
-            <img src="/icons/youtube.jpeg" alt="">
+            <img src="icons/facebook.jpeg" alt="Facebook">
+            <img src="icons/IG.jpeg" alt="Instagram">
+            <img src="icons/linkedIn.jpeg" alt="LinkedIn">
+            <img src="icons/youtube.jpeg" alt="YouTube">
           </i>
         </div>
 
         <div class="rhss">
-          <h5>Topic</h5>
-          <h5>Topic</h5>
-          <h5>Topic</h5>
+          <h5>School of Business & Finance</h5>
+          <h5>School of Management</h5>
+          <h5>School of Computer Engineering</h5>
 
-          <h6>Pages</h6>
-          <h6>Pages</h6>
-          <h6>Pages</h6>
+          <h6>Accountancy, Auditing & Control</h6>
+          <h6>Logistics & Transport Management</h6>
+          <h6>Computer Engineering (Software/CS)</h6>
 
-          <h6>Pages</h6>
-          <h6>Pages</h6>
-          <h6>Pages</h6>
+          <h6>Finance, Banking & Finance</h6>
+          <h6>Project Management, HRM</h6>
+          <h6>E-Commerce & Digital Marketing</h6>
 
-          <h6>Pages</h6>
-          <h6>Pages</h6>
-          <h6>Pages</h6>
+          <h6>Marketing, Trade & Sale, Insurance</h6>
+          <h6>Innovation & Entrepreneurship</h6>
+          <h6>Database Management & Web Dev</h6>
         </div>
-
       </footer>
     </section>
   </div>
-
-  <script>
-   /* function isEmail(email){
-      if(email.includes("k")){
-        return true;
-      }
-      else{
-        return false;
-      }
-      
-    }
-    console.log(isEmail("noelgamil.com"))*/
-  </script>
 </body>
 </html>
